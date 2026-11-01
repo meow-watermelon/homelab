@@ -1,0 +1,39 @@
+" Source a global configuration file if available
+if filereadable("/opt/csw/etc/vim/vimrc")
+  source /opt/csw/etc/vim/vimrc
+endif
+if filereadable("/etc/opt/csw/vim/vimrc")
+  source /etc/opt/csw/vim/vimrc
+endif
+
+set nocompatible
+set backspace=indent,eol,start
+
+set history=50
+set ruler
+set showcmd
+set wildmenu
+
+set ttimeout
+set ttimeoutlen=100
+
+set display=truncate
+set scrolloff=5
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set nopaste
+set pastetoggle=<F4>
+
+syntax on
+filetype plugin on
+
+autocmd FileType make setlocal noexpandtab

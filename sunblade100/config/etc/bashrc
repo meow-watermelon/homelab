@@ -1,0 +1,23 @@
+#
+# /etc/bashrc - Global Bash configuration for Solaris 9
+#
+
+# Only apply to Bash
+if [ -n "${BASH_VERSION:-}" ]; then
+
+    # Only apply to interactive shells
+    case $- in
+        *i*)
+            # Linux-style prompt: user@hostname:/full/path$
+            PS1='\u@\h:\w\$ '
+            export PS1
+
+            # Useful Bash settings
+            HISTSIZE=100000
+            HISTFILESIZE=20000
+
+            # Append history instead of overwriting it
+            shopt -s histappend
+            ;;
+    esac
+fi

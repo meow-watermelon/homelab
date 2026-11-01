@@ -1,0 +1,70 @@
+#ident	"@(#)profile	1.19	01/03/13 SMI"	/* SVr4.0 1.3	*/
+
+# The profile that all logins get before using their own .profile.
+
+trap ""  2 3
+export LOGNAME PATH
+
+if [ "$TERM" = "" ]
+then
+	if /bin/i386
+	then
+		TERM=sun-color
+	else
+		TERM=sun
+	fi
+	export TERM
+fi
+
+#	Login and -su shells get /etc/profile services.
+#	-rsh is given its environment in its .profile.
+
+case "$0" in
+-sh | -ksh | -jsh | -bash)
+
+	if [ ! -f .hushlogin ]
+	then
+		/usr/sbin/quota
+		#	Allow the user to break the Message-Of-The-Day only.
+		trap "trap '' 2"  2
+		/bin/cat -s /etc/motd
+		trap "" 2
+
+		/bin/mail -E
+		case $? in
+		0) 
+			echo "You have new mail."
+		  	;;
+		2) 
+			echo "You have mail."
+		   	;;
+		esac
+	fi
+esac
+
+umask 022
+trap  2 3
+
+PATH=/usr/bin:/usr/sbin:/usr/ccs/bin:/opt/csw/bin:/opt/csw/sbin
+export PATH
+
+EDITOR=/opt/csw/bin/vim
+VISUAL=/opt/csw/bin/vim
+export EDITOR VISUAL
+
+TERM=xterm
+PAGER=/opt/csw/bin/less
+export TERM PAGER
+
+export CURL_CA_BUNDLE=/etc/opt/csw/ssl/certs/ca-bundle-modern.pem
+
+# Load global Bash configuration
+if [ -n "${BASH_VERSION:-}" ]; then
+    case $- in
+        *i*)
+            if [ -r /etc/bashrc ]; then
+                . /etc/bashrc
+            fi
+            ;;
+    esac
+fi

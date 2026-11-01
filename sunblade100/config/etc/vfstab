@@ -1,0 +1,10 @@
+#device		device		mount		FS	fsck	mount	mount
+#to mount	to fsck		point		type	pass	at boot	options
+#
+fd	-	/dev/fd	fd	-	no	-
+/proc	-	/proc	proc	-	no	-
+/dev/dsk/c0t0d0s1	-	-	swap	-	no	-
+/dev/dsk/c0t0d0s0	/dev/rdsk/c0t0d0s0	/	ufs	1	no	-
+/dev/dsk/c0t0d0s7	/dev/rdsk/c0t0d0s7	/export/home	ufs	2	yes	-
+swap	-	/tmp	tmpfs	-	yes	-
+192.168.1.101:/mnt/main1  -  /mnt/homeserver  nfs  -  yes  vers=3,proto=tcp,hard,intr,rw
