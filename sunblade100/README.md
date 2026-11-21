@@ -1,6 +1,6 @@
 # Sun Blade 100 Workstation Restoration
 
-Version: 1.0.0 | Date: 2026-10-31
+Version: 1.1.0 | Date: 2026-11-21
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
