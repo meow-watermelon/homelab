@@ -1,6 +1,6 @@
 # Sun Blade 100 工作站修复记录
 
-版本：1.0.0 | 日期：2026-10-31
+版本：1.1.0 | 日期：2026-11-21
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
@@ -552,6 +552,14 @@ OBDIAG 4.17.1 2005/04/11 14:36
 # netstat -an | grep LISTEN | grep '\.22 '
       *.22                 *.*                0      0 49152      0 LISTEN
       *.22                 *.*                0      0 49152      0 LISTEN
+```
+
+如果可能，尽量重新生成Solaris 9的Host Key。原因是系统默认的SSH Host Key的长度只有1024 bit。有一些操作系统是不支持这种短长度的Host Key。可以用以下命令重新生成一个长度为2048 bit的Host Key。
+
+```
+$ sudo rm -f /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub
+$ sudo ssh-keygen -t rsa -b 2048 -f /etc/ssh/ssh_host_rsa_key -N ""
+$ sudo /etc/init.d/sshd stop && sudo /etc/init.d/sshd start
 ```
 
 但是由于Solaris 9的SSH服务的版本过于久远，现代的SSH客户端并不能直接登陆。通过Solaris 9的SSH错误信息，我找到了可用的密钥交换和主机签名算法，下面是我的SSH客户端配置情况
