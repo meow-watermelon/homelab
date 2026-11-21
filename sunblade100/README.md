@@ -554,6 +554,14 @@ SSH was the first service I configured. The Solaris 9 SSH service is already run
       *.22                 *.*                0      0 49152      0 LISTEN
 ```
 
+Whenever possible, regenerate the Solaris 9 host key. The default SSH host key is only 1024 bits long, and some operating systems do not support host keys this short. Use the following commands to generate a new 2048-bit host key:
+
+```
+$ sudo rm -f /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key.pub
+$ sudo ssh-keygen -t rsa -b 2048 -f /etc/ssh/ssh_host_rsa_key -N ""
+$ sudo /etc/init.d/sshd stop && sudo /etc/init.d/sshd start
+```
+
 However, Solaris 9's SSH implementation is old enough that modern SSH clients cannot log in with their default settings. From the error messages, I identified compatible key-exchange and host-key signature algorithms. My SSH client configuration is shown below:
 
 ```text
