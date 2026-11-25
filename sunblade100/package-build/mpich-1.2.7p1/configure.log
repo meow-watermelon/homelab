@@ -1,0 +1,365 @@
+Configuring with args --with-arch=solaris --with-device=ch_p4 -prefix=/opt/mpich-1.2.7p1 -cc=/opt/csw/bin/gcc -cflags=-m64 -mcpu=ultrasparc -optcc=-O0 -make=/opt/csw/bin/gmake -rsh=/usr/bin/ssh --disable-f77 --disable-f90 --disable-cxx --without-mpe --without-romio --disable-doc
+Configuring MPICH Version 1.2.7 (release) of : 2005/11/04 11:54:51
+Use the environment variable CC instead of configure argument -cc=/opt/csw/bin/gcc
+Use the environment variable CFLAGS instead of configure argument -cflags="-m64 -mcpu=ultrasparc"
+Use the environment variable MAKE instead of configure argument -make=/opt/csw/bin/gmake
+Use the environment variable RSHCOMMAND instead of configure argument -rsh=/usr/bin/ssh
+Don't build the Fortran interfaces
+Make will not build MPE routines
+checking whether filesystem respects case in file names... yes
+checking for current directory name... /export/home/ericlee/mpich-1.2.7p1
+checking for install
+checking for ar... found /usr/ccs/bin/ar ()
+checking for ranlib
+checking for gnumake... yes using --no-print-directory
+checking whether make supports include... yes
+checking for OSF V3 make... no
+checking for virtual path format... VPATH
+checking whether the compiler /opt/csw/bin/gcc accepts ANSI prototypes... yes
+Will not  build the Fortran interfaces
+checking for whether compiler works... yes
+checking whether the compiler /opt/csw/bin/gcc accepts ANSI prototypes... yes
+checking whether the compiler /opt/csw/bin/gcc accepts ## for concatenation in cpp... yes
+checking whether the compiler /opt/csw/bin/gcc accepts const modifier... yes
+checking for extension on executables... none
+checking how to run the C preprocessor
+checking for AIX
+checking for minix/config.h
+checking for volatile... yes
+Running device-specific setup program
+About to do p4 device
+Finished setting p4arch...
+Configuring p4 subsystem...
+checking for gcc... /opt/csw/bin/gcc
+checking whether the C compiler (/opt/csw/bin/gcc -DMPID_NO_FORTRAN -DMPID_NO_FORTRAN -O2 -m64 -mcpu=ultrasparc -m64 -mcpu=ultrasparc -m64) works... yes
+checking whether the C compiler (/opt/csw/bin/gcc -DMPID_NO_FORTRAN -DMPID_NO_FORTRAN -O2 -m64 -mcpu=ultrasparc -m64 -mcpu=ultrasparc -m64) is a cross-compiler... no
+checking whether we are using GNU C... yes
+checking whether /opt/csw/bin/gcc accepts -g... yes
+checking whether signals work correctly... Signals reset when used!
+checking size of int... 4
+checking size of long... 8
+checking for gettimeofday... yes
+checking for BSDgettimeofday... no
+checking for setsid... yes
+checking for isatty... yes
+creating ./config.status
+creating localdefs
+creating mpich-mpid.h
+Configuring with args -p4arch=SUN_SOLARIS -p4make=/opt/csw/bin/gmake --no-print-directory -opt= -cc=/opt/csw/bin/gcc -p4comm= -p4device=ch_p4 -srcdir=/export/home/ericlee/mpich-1.2.7p1/mpid/ch_p4/p4 -exec-prefix=/opt/mpich-1.2.7p1 -libbuild_dir=/export/home/ericlee/mpich-1.2.7p1/lib -cflags=-m64 -mcpu=ultrasparc   -rsh=/usr/bin/ssh --disable-f77 --disable-f90 --disable-doc
+Setting p4arch to SUN_SOLARIS
+Setting p4make to /opt/csw/bin/gmake --no-print-directory
+Setting p4comm to
+Setting p4device to ch_p4
+Setting RSHCOMMAND to /usr/bin/ssh
+checking for ranlib
+checking for -lsocket... yes
+checking for -lnsl... yes
+checking for how many arguments gettimeofday takes... two - whew
+checking whether cross-compiling... no
+checking for rpc/rpc.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for sys/socketvar.h... no
+checking for stdlib.h... yes
+checking for unistd.h... yes
+checking for string.h... yes
+checking for strings.h... yes
+checking for termio.h... yes
+checking for termios.h... yes
+checking for sys/types.h... yes
+checking for sys/wait.h... yes
+checking that time.h and sys/time.h can both be included... yes
+checking for time.h... yes
+checking that string.h and strings.h can be included... yes
+checking for correct headers with rpc/rpc.h... yes
+checking for correct headers with netinet/in.h... yes
+checking for stdarg.h... yes
+checking whether stdarg is oldstyle... no
+checking whether stdarg is correct... yes
+checking whether programs using stdarg link... yes
+checking for sigprocmask... yes
+checking for sigemptyset... yes
+checking for sigaddset... yes
+checking for sighold... yes
+checking for sigsetmask... no
+checking for sigblock... no
+checking for sigaction... yes
+checking for for struct sigaction... yes
+checking for for union semun... no
+checking for whether semctl needs union semun... yes
+checking for strerror... yes
+checking for whether sys_errlist needs do be defined... yes
+checking for -lcrypt... yes
+checking for vprintf... yes
+checking for sys/uio.h... yes
+checking for writev... yes
+checking for sched.h... yes
+checking for sched_yield... no
+checking for sched_yield... yes
+checking for getwd... yes
+checking for echo off supported with sgttyb... no
+checking for if getsockopt wants socklen_t... yes
+checking if xdr_array wants u_int... yes
+checking for xdrmem_create... yes
+checking for xdr_float... yes
+checking for XDR includes and functions... yes
+checking for rpc/xdr.h compiles... yes
+checking byte ordering
+creating config.status
+creating Makefile
+creating lib/Makefile
+creating alog/Makefile
+creating usc/Makefile
+creating usc/usctest/Makefile
+creating messages/Makefile
+creating include/Makefile
+creating lib_f/Makefile
+creating contrib/Makefile
+creating contrib_f/Makefile
+creating bin/Makefile
+creating doc/Makefile
+creating messages_f/Makefile
+creating misc/Makefile
+creating monitors/Makefile
+creating servers/Makefile
+creating p4_config.h
+Finished configuring the p4 subsystem
+Configuring new p4 secure server
+checking for gcc... /opt/csw/bin/gcc
+checking whether the C compiler (/opt/csw/bin/gcc -DMPID_NO_FORTRAN -DMPID_NO_FORTRAN -O2 -m64 -mcpu=ultrasparc -m64 -mcpu=ultrasparc -DUSE_SOCKLEN_T -DUSE_U_INT_FOR_XDR -m64) works... yes
+checking whether the C compiler (/opt/csw/bin/gcc -DMPID_NO_FORTRAN -DMPID_NO_FORTRAN -O2 -m64 -mcpu=ultrasparc -m64 -mcpu=ultrasparc -DUSE_SOCKLEN_T -DUSE_U_INT_FOR_XDR -m64) is a cross-compiler... no
+checking whether we are using GNU C... yes
+checking whether /opt/csw/bin/gcc accepts -g... yes
+checking for ranlib... ranlib
+checking for virtual path format... VPATH
+checking for library containing xdr_array... -lnsl
+checking for library containing socket... -lsocket
+checking for library containing crypt... none required
+checking how to run the C preprocessor... /opt/csw/bin/gcc -E
+checking for termios.h... yes
+checking for fcntl.h... yes
+checking for unistd.h... yes
+checking for sys/select.h... yes
+checking for stdlib.h... yes
+checking for index... yes
+checking for rindex... yes
+checking for seteuid... yes
+checking for setresuid... no
+checking for setegid... yes
+checking for setresgid... no
+checking for Kerberos (/usr/kerberos)... checking for AFS (/usr/afsws)... no
+checking for SSL in cache... no. checking manually
+checking for include directory for ssl... no
+checking for strings.h... yes
+checking for string.h... yes
+checking for getopt... yes
+checking for strerror... yes
+checking for posix signal in cache... no. checking manually
+checking for sigaction... yes
+checking for sigemptyset... yes
+checking for sigaddset... yes
+checking for sigprocmask... yes
+checking for waitpid... yes
+checking for setpgrp... yes
+checking whether setpgrp takes no argument... yes
+checking if getsockopt wants socklen_t... yes
+creating ./config.status
+creating Makefile
+creating server.h
+Finished configuring the p4 secure server
+checking whether cross-compiling... no
+checking for gethrtime... yes
+checking for clock_gettime... no
+checking for clock_getres... no
+checking for how many arguments gettimeofday takes... two - whew
+checking for signal.h... yes
+checking for sigaction... yes
+checking for for struct sigaction... yes
+checking for weak symbol support... pragma weak
+checking whether weak symbols are visible to other files... yes
+checking for perl5... no
+checking for perl... found /usr/bin/perl (perl)
+checking for byte ordering... big endian
+checking for XDR include... yes
+checking for XDR functions... no
+checking for XDR functions... no
+*# XDR not available on this system
+checking for uname... yes
+checking for netdb.h... yes
+checking for gethostbyname... no
+checking for -lnsl... yes
+checking for gethostbyname in libnsl
+checking for gethostbyname... no
+checking for gethostname... yes
+checking for sysinfo... yes
+checking for sys/systeminfo.h... yes
+checking for getdomainname... no
+checking whether Fortran programs can link with needed C functions... ./configure: f77: not found
+no
+checking whether C++ programs can link with needed C functions... yes
+checking for catopen... yes
+checking for catclose... yes
+checking for catgets... yes
+checking for gencat... found /usr/bin/gencat (1)
+checking for nl_types.h... yes
+checking for ANSI C header files
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for unistd.h... yes
+checking for stdarg.h... yes
+checking whether stdarg is oldstyle... no
+checking whether stdarg is correct... yes
+checking whether programs using stdarg link... yes
+checking for malloc return type... void
+checking for system... yes
+checking for nice... yes
+checking for strdup... yes
+checking for memory.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/sockio.h... yes
+checking whether the compiler /opt/csw/bin/gcc runs... yes
+checking for correct handling of conditionals...... yes
+checking for correct handling of conditionals part 2 ...... yes
+checking for correct handling of #elif... yes
+checking that constant folding in arrays works... yes
+checking that structs are handled properly... yes
+checking that compiler truncates unsigned char correctly ...... yes
+checking that compiler/hardware has commutative arithmetic ...... yes
+checking that compiler assigns to char correctly ...... yes
+checking that compiler does not call unknown routines for long doubles... yes
+checking that compiler accepts args correctly ...... yes
+checking whether ranlib works... yes
+checking for broken handling of common symbols... could not test
+checking for ar... found /usr/ccs/bin/ar (1)
+checking for size of void *... 8
+checking for pointers greater than 32 bits... yes
+checking for size of int... 4
+checking for int large enough for pointers... no
+checking for C integer type for MPI_Aint... 
+checking for size of long... 8
+C integer type for MPI_Aint is... long
+checking for long long... yes
+checking whether compiler can handle loops with long long... yes
+checking for long double... yes
+checking for size of double... 8
+checking for size of long double... 16
+checking for structure alignment... largest
+checking for sync... found /usr/bin/sync (1)
+checking whether mpich can be used as the library name... yes
+checking whether head command is broken... no
+creating config.status
+creating Makefile
+creating util/Makefile
+creating examples/Makefile
+creating src/pt2pt/Makefile
+creating src/coll/Makefile
+creating src/context/Makefile
+creating src/dmpi/Makefile
+creating src/env/Makefile
+creating src/topol/Makefile
+creating src/profile/Makefile
+creating src/coll2/Makefile
+creating src/util/Makefile
+creating src/infoexport/Makefile
+creating examples/basic/Makefile
+creating src/misc2/Makefile
+creating src/external/Makefile
+creating mpichconf.h
+creating util/mpicc
+creating util/mpicxx
+creating util/mpiinstall
+creating util/mpirun
+creating util/mpichlib.conf
+creating util/mpiman
+creating util/chkserv
+creating util/chkmachine
+creating util/tstmachines
+creating include/mpidefs.h
+creating include/mpif.f90
+Configuring the test suite...
+Configuring with args -basecc=/opt/csw/bin/gcc -cc=/export/home/ericlee/mpich-1.2.7p1/bin/mpicc -make=/opt/csw/bin/gmake --no-print-directory -device=ch_p4 -mpichpath=/export/home/ericlee/mpich-1.2.7p1/bin --enable-boot -cflags=-DMPID_NO_FORTRAN -DMPID_NO_FORTRAN -O2 -m64 -mcpu=ultrasparc -m64 -mcpu=ultrasparc -DUSE_SOCKLEN_T -DUSE_U_INT_FOR_XDR -DHAVE_MPICHCONF_H -nof77 --disable-io
+Don't build the tests that need Fortran
+checking whether cross-compiling... no
+checking whether the compiler /opt/csw/bin/gcc runs... yes
+checking for gnumake... no
+checking whether make supports include... yes
+checking for OSF V3 make... no
+checking for virtual path format... VPATH
+checking for stdlib.h... yes
+checking for unistd.h... yes
+checking for string.h... yes
+checking for stdarg is correct... yes
+checking for long double... yes
+checking for long long... yes
+checking whether compiler can handle loops with long long... yes
+checking whether the compiler /opt/csw/bin/gcc accepts ANSI prototypes... yes
+checking for signal.h... yes
+checking for sigaction... yes
+checking for sleep... yes
+checking for sysconf... yes
+creating config.status
+creating Makefile
+creating pt2pt/Makefile
+creating coll/Makefile
+creating topol/Makefile
+creating context/Makefile
+creating env/Makefile
+creating profile/Makefile
+creating pt2pt/runtests
+creating coll/runtests
+creating topol/runtests
+creating context/runtests
+creating command/runtests
+creating env/runtests
+creating profile/runtests
+Configuring the performance tests ...
+Configure in /export/home/ericlee/mpich-1.2.7p1/examples/perftest creating cache ./config.cache
+checking for a BSD compatible install... /opt/csw/bin/ginstall -c
+checking whether build environment is sane... yes
+checking whether /opt/csw/bin/gmake --no-print-directory sets ${MAKE}... yes
+checking for working aclocal... missing
+checking for working autoconf... missing
+checking for working automake... missing
+checking for working autoheader... missing
+checking for working makeinfo... missing
+checking whether clock skew breaks make... no
+checking whether make supports include... yes
+checking whether make allows comments in actions... yes
+checking for virtual path format... VPATH
+checking whether make sets CFLAGS... yes
+checking for cit... no
+checking for gnuplot... no
+checking how to run the C preprocessor... /opt/csw/bin/gcc -E
+checking whether C compiler accepts option -O4 -Ofast... yes
+checking whether routines compiled with -O4 -Ofast can be linked with ones compiled  without -O4 -Ofast... yes
+checking for library containing fabs... -lm
+checking for ANSI C header files... yes
+checking for sys/time.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for working const... yes
+checking for restrict... __restrict
+checking for long long... yes
+updating cache ./config.cache
+creating ./config.status
+creating Makefile
+creating mpptestconf.h
+creating mpid/ch_p4/Makefile
+creating mpid/tests/Makefile
+creating mpichconf.h
+mpichconf.h is unchanged
+*# --->
+*# You should register your copy of MPICH with us by sending mail
+*# to majordomo@mcs.anl.gov containing the message
+*# subscribe mpi-users
+*# This will allow us to notify you of new releases of MPICH.
+*#  
+*# You can also check the MPICH home page at 
+*# http://www.mcs.anl.gov/mpi/mpich
+*# ---< 
+Old style arguments to configure were found:
+Use the environment variable CC instead of configure argument -cc=/opt/csw/bin/gcc Use the environment variable CFLAGS instead of configure argument -cflags="-m64 -mcpu=ultrasparc" Use the environment variable MAKE instead of configure argument -make=/opt/csw/bin/gmake Use the environment variable RSHCOMMAND instead of configure argument -rsh=/usr/bin/ssh
+
+Configuration completed.
